@@ -1,0 +1,27 @@
+apply plugin: 'maven'
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["assets"]
+        }
+        java {
+            srcDirs = ["src"]
+        }
+   }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compileOnly "org.jmonkeyengine:jme3-core:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-lwjgl:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-desktop:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-bullet:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-effects:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-plugins:3.2.3-stable"
+    compileOnly "org.jmonkeyengine:jme3-bullet-native:3.2.3-stable"
+}
