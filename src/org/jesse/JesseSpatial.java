@@ -24,8 +24,7 @@ public class JesseSpatial extends Node {
     }
 
     public AnimChannel getChannel(int i) {
-        while (animChannels.size() <= i)
-            animChannels.add(animControl.createChannel());
+        while (animChannels.size() <= i) animChannels.add(animControl.createChannel());
         return animChannels.get(i);
     }
 
